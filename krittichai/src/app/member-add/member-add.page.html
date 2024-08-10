@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>เพิ่มสมาชิก</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <form novalidate #member="ngForm">
+    <ion-item>
+      <ion-label position="floating">ชื่อ-นามสกุล</ion-label>
+      <ion-input ngModel name="fullname"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">อีเมล</ion-label>
+      <ion-input ngModel name="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">เบอร์โทร</ion-label>
+      <ion-input ngModel name="mobile"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">ไลน์ไอดี</ion-label>
+      <ion-input ngModel name="lineid"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">เพิ่มเติม</ion-label>
+      <ion-textarea ngModel name="detail"></ion-textarea>
+    </ion-item>
+    <ion-button expand="full" (click)="insert(member.value)">บันทึกข้อมูล</ion-button>
+  </form>
+</ion-content>

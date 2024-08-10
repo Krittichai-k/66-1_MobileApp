@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="danger">
+    <ion-title>สมาชิก</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div style="height: 20px;"></div>
+  <ion-item detail *ngFor="let member of members" [routerLink]="['/member-detail', member.mem_id]">
+    <ion-label>{{ member.mem_fullname }}</ion-label>
+  </ion-item>
+</ion-content>
+
+<ion-fab vertical="top" horizontal="end" slot="fixed">
+  <ion-fab-button color="success" routerLink="/member-add">
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
